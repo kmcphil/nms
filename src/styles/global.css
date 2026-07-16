@@ -1,0 +1,331 @@
+/**
+ * Global foundation — typography, spacing, containers, buttons
+ * Brand colors: style-guide.pdf → tokens.css
+ */
+
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--brand-red);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 3px;
+}
+
+/* ── Site shell ───────────────────────────────────────────── */
+
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site__main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Page container ───────────────────────────────────────── */
+
+.page {
+  width: 100%;
+  padding-block: calc(var(--nav-height) + var(--space-xl)) var(--space-2xl);
+}
+
+.page--wide {
+  padding-inline: 0;
+}
+
+.page .wrap,
+.page .wrap-wide {
+  width: 100%;
+}
+
+/* Scaffold label only — removed when a page is built */
+.page-placeholder h1 {
+  margin-bottom: 0;
+}
+
+/* ── Containers ───────────────────────────────────────────── */
+
+.wrap {
+  width: 100%;
+  max-width: var(--container-default);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+.wrap-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --page-gutter: 1.75rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --page-gutter: 2rem;
+  }
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-display);
+  margin: 0 0 var(--space-md);
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h4 {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  line-height: var(--line-height-ui);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+  max-width: var(--measure-prose);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lede {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-snug);
+  color: var(--text-secondary);
+  max-width: var(--measure-prose-wide);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--brand-red);
+  margin: 0 0 var(--space-sm);
+}
+
+/* ── Spacing helpers ──────────────────────────────────────── */
+
+.section {
+  padding-block: var(--section-padding-md);
+}
+
+@media (min-width: 960px) {
+  .section {
+    padding-block: var(--section-padding-lg);
+  }
+}
+
+.section--tight {
+  padding-block: var(--section-padding-sm);
+}
+
+.stack > * + * {
+  margin-top: var(--space-md);
+}
+
+.stack--lg > * + * {
+  margin-top: var(--space-lg);
+}
+
+/* ── Buttons (brand: red / black / white only) ────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 1rem 1.75rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-none);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-ui);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover {
+  color: inherit;
+}
+
+.btn--primary {
+  background: var(--brand-red);
+  color: var(--brand-white);
+  border-color: var(--brand-red);
+}
+
+.btn--primary:hover {
+  background: var(--brand-black);
+  border-color: var(--brand-black);
+  color: var(--brand-white);
+}
+
+.btn--secondary {
+  background: var(--brand-black);
+  color: var(--brand-white);
+  border-color: var(--brand-black);
+}
+
+.btn--secondary:hover {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--brand-white);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--brand-black);
+  border-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  padding-inline: 0.15rem;
+  min-height: auto;
+}
+
+.btn--ghost:hover {
+  background: transparent;
+  color: var(--brand-red);
+}
+
+.btn--ghost-light {
+  background: transparent;
+  color: var(--brand-white);
+  border-color: rgba(var(--brand-white-rgb), 0.5);
+}
+
+.btn--ghost-light:hover {
+  background: var(--brand-white);
+  color: var(--brand-black);
+  border-color: var(--brand-white);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* ── A11y ─────────────────────────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

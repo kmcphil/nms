@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nataliemicaleschultz.com/sitemap-index.xml

@@ -1,0 +1,157 @@
+/**
+ * Natalie Micale Schultz — design tokens
+ *
+ * Brand SSOT: reference/style-guide.pdf (see reference/style-guide-spec.md)
+ * Brand colors ONLY: Red #C8102E · Black #000000 · White #FFFFFF
+ * Logo script (Sunday April): logo artwork only — never body/UI
+ *
+ * Hierarchy uses opacity of black or white — no fourth brand color.
+ */
+
+:root {
+  /* ── Brand (style guide) ────────────────────────────────── */
+  --brand-red: #c8102e;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+
+  /* RGB channels for overlays (must match HEX above) */
+  --brand-red-rgb: 200, 16, 46;
+  --brand-black-rgb: 0, 0, 0;
+  --brand-white-rgb: 255, 255, 255;
+
+  /* ── Functional hierarchy (black/white opacity only) ────── */
+  --ink: var(--brand-black);
+  --ink-soft: rgba(var(--brand-black-rgb), 0.72);
+  --ink-muted: rgba(var(--brand-black-rgb), 0.48);
+  --line: rgba(var(--brand-black-rgb), 0.12);
+  --line-strong: rgba(var(--brand-black-rgb), 0.24);
+  --surface-subtle: rgba(var(--brand-black-rgb), 0.04);
+  --photo-placeholder: rgba(var(--brand-black-rgb), 0.08);
+  --red-wash: rgba(var(--brand-red-rgb), 0.04);
+
+  /* ── Backgrounds ────────────────────────────────────────── */
+  --bg-primary: var(--brand-white);
+  --bg-inverse: var(--brand-black);
+  --bg-header: rgba(var(--brand-white-rgb), 0.92);
+  --bg-accent-wash: var(--red-wash);
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-soft);
+  --text-muted: var(--ink-muted);
+  --text-inverse: var(--brand-white);
+  --text-accent: var(--brand-red);
+  --text-on-red: var(--brand-white);
+
+  /* ── Font families
+   * Logo script = Sunday April (in logo files only — not loaded for UI)
+   * Site UI/body = website editorial stack (brief / design-direction)
+   * Never use Sunday April for body, nav, or buttons
+   */
+  --font-display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-body: 'Newsreader', Georgia, serif;
+  --font-ui: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* ── Type scale ─────────────────────────────────────────── */
+  --font-size-xs: 0.6875rem;
+  --font-size-sm: clamp(0.875rem, 0.82rem + 0.2vw, 0.9375rem);
+  --font-size-base: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --font-size-lg: clamp(1.35rem, 1.2rem + 0.55vw, 1.625rem);
+  --font-size-xl: clamp(2.25rem, 1.6rem + 2.2vw, 3.5rem);
+  --font-size-2xl: clamp(3.25rem, 2.1rem + 4vw, 5.5rem);
+  --font-size-3xl: clamp(4rem, 2.4rem + 5.5vw, 7.25rem);
+
+  --line-height-tight: 0.92;
+  --line-height-snug: 1.2;
+  --line-height-body: 1.72;
+  --line-height-ui: 1.35;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --letter-spacing-display: -0.035em;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.16em;
+  --letter-spacing-ui: 0.04em;
+
+  /* ── Layout ─────────────────────────────────────────────── */
+  --container-default: 1100px;
+  --container-wide: 1440px;
+  --container-bleed: 100%;
+  --measure-prose: 36rem;
+  --measure-prose-wide: 42rem;
+  --page-gutter: 1.25rem;
+
+  --section-padding-lg: 12rem;
+  --section-padding-md: 8rem;
+  --section-padding-sm: 5.5rem;
+
+  --space-2xs: 0.4rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.25rem;
+  --space-md: 2rem;
+  --space-lg: 3.25rem;
+  --space-xl: 5.5rem;
+  --space-2xl: 8rem;
+  --space-3xl: 12rem;
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+
+  /* Style guide: no logo shadows/effects — UI stays sharp */
+  --radius-none: 0;
+  --radius-sm: 0;
+  --shadow-none: none;
+  --shadow-subtle: none;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-base: 380ms;
+  --duration-slow: 1100ms;
+
+  /* Nav height — room for a larger brand logo */
+  --nav-height: 8.75rem; /* clears larger signature logo */
+
+  /* Logo minimums (style guide — digital) */
+  --logo-horizontal-min-width: 160px;
+  --logo-stacked-min-width: 120px;
+  --logo-monogram-min-width: 40px;
+
+  /* ── Aliases used by existing chrome CSS ─────────────────── */
+  --color-red: var(--brand-red);
+  --color-black: var(--brand-black);
+  --color-white: var(--brand-white);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mute: var(--ink-muted);
+  --color-line: var(--line);
+  --neutral-ink: var(--ink);
+  --neutral-ink-soft: var(--ink-soft);
+  --neutral-ink-muted: var(--ink-muted);
+  --neutral-line: var(--line);
+  --neutral-surface: var(--surface-subtle);
+  --neutral-photo: var(--photo-placeholder);
+  --text-xs: var(--font-size-xs);
+  --text-sm: var(--font-size-sm);
+  --text-base: var(--font-size-base);
+  --text-lg: var(--font-size-lg);
+  --text-xl: var(--font-size-xl);
+  --text-2xl: var(--font-size-2xl);
+  --text-3xl: var(--font-size-3xl);
+  --leading-tight: var(--line-height-tight);
+  --leading-snug: var(--line-height-snug);
+  --leading-body: var(--line-height-body);
+  --measure: var(--measure-prose);
+  --measure-wide: var(--measure-prose-wide);
+  --header-h: var(--nav-height);
+  --wrap: var(--container-default);
+  --wrap-wide: var(--container-wide);
+  --wrap-bleed: var(--container-bleed);
+  --duration: var(--duration-base);
+}
+
+/*
+ * Breakpoints (implementation): 640 · 800 · 960 · 1100 · 1280
+ */

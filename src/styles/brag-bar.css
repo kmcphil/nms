@@ -1,0 +1,114 @@
+/**
+ * BragBar — compact credibility strip (not a content section)
+ */
+
+.brag {
+  background: var(--brand-white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  /* ~40–56px desktop */
+  padding-block: clamp(2.5rem, 3.5vw, 3.5rem);
+}
+
+.brag__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.brag__label {
+  margin: 0;
+  max-width: 38rem;
+  font-family: var(--font-body, 'EB Garamond', Georgia, serif);
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  line-height: 1.45;
+  color: var(--brand-ink, #3a3631);
+}
+
+.brag__logos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  row-gap: 0.85rem;
+}
+
+.brag__item {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.75rem;
+  flex: 0 0 auto;
+}
+
+.brag__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 9.5rem;
+  color: rgba(var(--brand-black-rgb), 0.45);
+}
+
+.brag__mark img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(1) contrast(0.92);
+  opacity: 0.7;
+}
+
+.brag__placeholder {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  color: inherit;
+}
+
+/* Tablet / mid — allow wrap into centered rows */
+@media (max-width: 1099px) {
+  .brag__logos {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile — two centered rows, or restrained scroll if preferred */
+@media (max-width: 639px) {
+  .brag {
+    padding-block: 2.25rem;
+  }
+
+  .brag__inner {
+    gap: 0.75rem;
+  }
+
+  .brag__logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.35rem;
+    row-gap: 0.85rem;
+  }
+
+  .brag__item {
+    height: 1.65rem;
+  }
+}
