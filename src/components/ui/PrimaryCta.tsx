@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { primaryCta } from '../../data/site';
+import { trackEvent } from '../../utils/analytics';
 
 type Props = {
   label?: string;
@@ -18,7 +19,11 @@ export function PrimaryCta({
     variant === 'ghost' ? 'btn--ghost' : variant === 'ghost-light' ? 'btn--ghost-light' : 'btn--primary';
 
   return (
-    <Link className={`btn ${variantClass} ${className}`.trim()} to={href}>
+    <Link
+      className={`btn ${variantClass} ${className}`.trim()}
+      to={href}
+      onClick={() => trackEvent('cta_click', { label, href })}
+    >
       {label}
     </Link>
   );

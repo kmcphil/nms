@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nataliemicaleschultz.com/sitemap-index.xml
+Sitemap: https://nataliemicaleschultz.com/sitemap.xml

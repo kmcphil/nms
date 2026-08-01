@@ -1,0 +1,24 @@
+/* Structure — containers, rules, radii, elevation. Editorial: no rounding, no shadows on UI. */
+:root {
+  --container: 1100px;
+  --container-wide: 1440px;
+
+  --rule-thin: 1px;
+  --rule-structural-width: 2px;
+  --photo-border-width: 2px;
+
+  --radius: 0;              /* clean rectangles only */
+  --shadow-ui: none;        /* no drop shadows on UI */
+  --shadow-photo: 0 18px 48px rgba(20, 17, 16, 0.1); /* photography only */
+
+  --logo-nav-height: 80px;   /* sized so this 2:1 signature clears the 160px minimum width */
+  --logo-footer-height: 80px; /* same — 160px wide minimum wins over V1's 40px height */
+  --logo-horizontal-min-width: 160px;
+  --logo-stacked-min-width: 120px;
+  --logo-monogram-min-width: 40px;
+  --logo-clear-space: 1em; /* ≥ logo height on all sides */
+
+  --aspect-portrait: 4 / 5; /* @kind other */
+  --aspect-landscape: 3 / 2; /* @kind other */
+  --aspect-wide: 16 / 9; /* @kind other */
+}

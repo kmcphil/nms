@@ -1,0 +1,19 @@
+/* Minimal element defaults so a bare page already reads as the brand. */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--body-md);
+  line-height: var(--leading-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img, svg, video { display: block; max-width: 100%; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; transition: var(--transition-color); }
+a:hover { color: var(--link-hover); }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+::selection { background: var(--red); color: var(--paper); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

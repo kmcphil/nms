@@ -1,4 +1,6 @@
 import { FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { trackEvent } from '../../utils/analytics';
 
 const engagements = [
   'Not sure yet',
@@ -12,12 +14,16 @@ const revenueBands = ['Prefer not to say', 'Under $5M', '$5M–$15M', '$15M–$5
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'pending' | 'success' | 'error'>('idle');
-  const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact';
+  const endpoint =
+    import.meta.env.VITE_CONTACT_ENDPOINT ||
+    import.meta.env.PUBLIC_CONTACT_ENDPOINT ||
+    '/api/contact';
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     setStatus('pending');
+    trackEvent('form_submit', { form: 'start_the_conversation' });
 
     try {
       const res = await fetch(endpoint, {
@@ -27,14 +33,16 @@ export function ContactForm() {
       });
       if (!res.ok) throw new Error('Request failed');
       setStatus('success');
+      trackEvent('form_success', { form: 'start_the_conversation' });
       form.reset();
     } catch {
       setStatus('error');
+      trackEvent('form_error', { form: 'start_the_conversation' });
     }
   }
 
   return (
-    <form className="form" method="POST" action={endpoint} onSubmit={onSubmit} noValidate={false}>
+    <form className="form" method="POST" action={endpoint} onSubmit={onSubmit}>
       <input
         type="text"
         name="company_website"
@@ -128,31 +136,33 @@ export function ContactForm() {
       </div>
 
       <p className="form__note">
-        I review every inquiry. Qualified leads receive a link for a 30-minute fit call. If we proceed,
-        you’ll receive written scope, timeline, responsibilities, boundaries, and payment terms.
-        Scheduling links are not sent automatically.
+        I review every inquiry. Qualified leads receive a link for a 30-minute fit call. If we
+        proceed, you’ll receive written scope, timeline, responsibilities, boundaries, and payment
+        terms. Scheduling links are not sent automatically.
       </p>
 
       <p className="form__privacy">
         By submitting, you agree to be contacted about this inquiry. See the{' '}
-        <a href="/privacy">Privacy Policy</a>.
+        <Link to="/privacy">Privacy Policy</Link>.
       </p>
 
       <button className="btn btn--primary" type="submit" disabled={status === 'pending'}>
         {status === 'pending' ? 'Sending…' : 'Submit inquiry'}
       </button>
 
-      {status === 'success' ? (
-        <p className="form__status" data-state="success">
-          Thank you. Your inquiry is in. I will review it and follow up if there is a fit for a 30-minute
-          conversation.
-        </p>
-      ) : null}
-      {status === 'error' ? (
-        <p className="form__status" data-state="error">
-          Something went wrong sending the form. Please email directly or try again in a moment.
-        </p>
-      ) : null}
+      <div aria-live="polite" aria-atomic="true">
+        {status === 'success' ? (
+          <p className="form__status" data-state="success">
+            Thank you. Your inquiry is in. I will review it and follow up if there is a fit for a
+            30-minute conversation.
+          </p>
+        ) : null}
+        {status === 'error' ? (
+          <p className="form__status" data-state="error" role="alert">
+            Something went wrong sending the form. Please email directly or try again in a moment.
+          </p>
+        ) : null}
+      </div>
     </form>
   );
 }

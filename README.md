@@ -9,8 +9,8 @@ Premium editorial personal-brand site. Built by Marigold ONE11.
 - React + Vite + TypeScript
 - React Router
 - Custom CSS (editorial system — not a UI kit)
-- Brand colors: `#C8102E` / black / white
-- Type: Instrument Serif + Source Serif 4 + DM Sans (UI)
+- Brand colors: identity `#C8102E` · web UI red `#C20000` · black · white
+- Type: Playfair Display + EB Garamond + Helvetica Neue (UI) · Courier (datelines)
 
 ## Develop
 
@@ -28,11 +28,25 @@ npm run build
 npm run preview
 ```
 
+Optional image pass after adding photos:
+
+```bash
+python scripts/optimize-images.py
+```
+
+## Docs
+
+- [docs/SEO.md](docs/SEO.md)
+- [docs/QA-CHECKLIST.md](docs/QA-CHECKLIST.md)
+- [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md)
+- [docs/CMS-HANDOFF.md](docs/CMS-HANDOFF.md)
+- Claude Design system: [`.cursor/skills/natalie-design/`](.cursor/skills/natalie-design/) · [`reference/claude-design/`](reference/claude-design/)
+
 ## Brief alignment
 
 - Primary CTA: Start the Conversation (not “book a free strategy call”)
 - Nav: Home · About · Services (dropdown) · Results · FAQ · persistent CTA
-- Growth Clarity Diagnostic lives on Services only
+- Growth Clarity Diagnostic lives on Services (`#diagnostic`)
 - Results production gate: no fake testimonials/metrics
 
 ## Ownership

@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { BragBar } from '../components/sections/BragBar';
 import { PrimaryCta } from '../components/ui/PrimaryCta';
+import { Picture } from '../components/ui/Picture';
 import { Seo } from '../components/seo/Seo';
 import { homeImages } from '../data/images';
-import { site } from '../data/site';
+import { pageSeo, personSchema, professionalServiceSchema } from '../data/seo';
 import '../styles/home.css';
 
 const problemSignals = [
@@ -138,11 +139,7 @@ const pathways = [
 export function HomePage() {
   return (
     <>
-      <Seo
-        title={site.name}
-        description="Brand strategy and growth clarity for founder-led businesses with real traction."
-        path="/"
-      />
+      <Seo {...pageSeo.home} schema={[personSchema(), professionalServiceSchema()]} />
 
       {/* M1 — Hero · DL2A0265 */}
       <section className="cover" aria-label="Introduction">
@@ -173,11 +170,13 @@ export function HomePage() {
             </p>
           </div>
           <div className="cover__photo">
-            <img
+            <Picture
               src={homeImages.hero}
               alt="Natalie Micale Schultz, strategic advisor and former agency founder."
+              width={1333}
+              height={2000}
+              loading="eager"
               fetchPriority="high"
-              decoding="async"
             />
           </div>
         </div>
@@ -226,11 +225,11 @@ export function HomePage() {
             </blockquote>
           </div>
           <figure className="creed__photo">
-            <img
+            <Picture
               src={homeImages.creed}
               alt="Natalie Micale Schultz, warm and direct."
-              loading="lazy"
-              decoding="async"
+              width={1333}
+              height={2000}
             />
           </figure>
         </div>
@@ -290,11 +289,11 @@ export function HomePage() {
           </div>
 
           <figure className="meet__photo">
-            <img
+            <Picture
               src={homeImages.framework}
               alt="Natalie Micale Schultz mapping strategy at the whiteboard."
-              loading="lazy"
-              decoding="async"
+              width={1333}
+              height={2000}
             />
           </figure>
         </div>
@@ -419,11 +418,11 @@ export function HomePage() {
           </div>
 
           <figure className="proof-block__photo">
-            <img
+            <Picture
               src={homeImages.diagnostic}
               alt="Natalie presenting a Growth Clarity Diagnostic visual."
-              loading="lazy"
-              decoding="async"
+              width={1333}
+              height={2000}
             />
           </figure>
         </div>
@@ -433,11 +432,11 @@ export function HomePage() {
       <section className="stand" id="stand" aria-labelledby="stand-heading">
         <div className="wrap-wide stand__inner">
           <figure className="stand__photo">
-            <img
+            <Picture
               src={homeImages.closing}
               alt="Natalie Micale Schultz in conversation."
-              loading="lazy"
-              decoding="async"
+              width={1333}
+              height={2000}
             />
           </figure>
 

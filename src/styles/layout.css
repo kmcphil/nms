@@ -69,13 +69,13 @@
 
 .header__logo--desktop {
   display: none;
-  height: 7.85rem; /* +~13% — anchors top left vs nav weight */
+  height: var(--logo-nav-height);
   min-width: var(--logo-horizontal-min-width);
 }
 
 .header__logo--mobile {
   display: block;
-  height: 7rem;
+  height: calc(var(--logo-nav-height) * 0.95);
   min-width: var(--logo-stacked-min-width);
 }
 
@@ -337,7 +337,7 @@
 }
 
 .footer__logo {
-  height: 2.75rem;
+  height: var(--logo-footer-height);
   width: auto;
   min-width: var(--logo-horizontal-min-width);
   margin-bottom: var(--space-md);

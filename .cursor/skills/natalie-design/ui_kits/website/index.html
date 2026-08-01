@@ -1,0 +1,44 @@
+<!-- @dsCard group="Website" viewport="1280x860" name="Website UI kit" subtitle="Click-through recreation: home, about, ways to work together, start the conversation" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Natalie Micale Schultz — Website UI kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--paper)}</style></head>
+<body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" src="HomeScreen.jsx"></script>
+<script type="text/babel" src="AboutScreen.jsx"></script>
+<script type="text/babel" src="ServicesScreen.jsx"></script>
+<script type="text/babel" src="ContactScreen.jsx"></script>
+<script type="text/babel">
+const { SiteHeader, SiteFooter } = window.NatalieMicaleSchultzDesignSystem_f5075c;
+const nav = [
+  { label: 'About', href: 'about' },
+  { label: 'Ways to Work Together', href: 'services' },
+];
+function App() {
+  const [screen, setScreen] = React.useState('home');
+  const go = (s) => { setScreen(s); window.scrollTo(0, 0); };
+  const Screen = { home: window.HomeScreen, about: window.AboutScreen, services: window.ServicesScreen, contact: window.ContactScreen }[screen];
+  return (
+    <div>
+      <div onClick={(e) => { const a = e.target.closest('a'); if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('#')) { e.preventDefault(); const t = a.getAttribute('href').slice(1); if (['about','services','contact','results'].includes(t)) go(t === 'results' ? 'home' : t); } }}>
+        <div onClickCapture={() => {}}>
+          <SiteHeaderShim screen={screen} go={go} />
+          <Screen go={go} />
+          <SiteFooter logoSrc="../../assets/logos/logo-horizontal-white.svg" />
+        </div>
+      </div>
+    </div>
+  );
+}
+function SiteHeaderShim({ screen, go }) {
+  return (
+    <div onClick={(e) => { const a = e.target.closest('a'); if (!a) return; const h = a.getAttribute('href'); if (h === '/') { e.preventDefault(); go('home'); } else if (nav.some(n => n.href === h)) { e.preventDefault(); go(h); } else if (h === '/start-the-conversation') { e.preventDefault(); go('contact'); } }}>
+      <SiteHeader logoSrc="../../assets/logos/logo-horizontal-black.svg" nav={nav} activeHref={screen} />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

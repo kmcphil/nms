@@ -23,5 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# editor / agent
-.cursor/
+# editor / agent — keep project skills shareable
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**

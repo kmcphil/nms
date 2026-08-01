@@ -1,0 +1,52 @@
+/* Type — four voices. Display, body, UI, dateline. */
+:root {
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  /* Display — Playfair */
+  --display-hero: clamp(2.65rem, 1.6rem + 3vw, 4.625rem); /* @kind other */
+  --display-xl: clamp(2.35rem, 1.5rem + 2.4vw, 3.75rem); /* @kind other */
+  --display-lg: clamp(2rem, 1.4rem + 1.8vw, 2.85rem); /* @kind other */
+  --display-md: 1.625rem;   /* section-opener title */
+  --display-sm: 1.5rem;     /* pathway card title */
+  --display-xs: 1.25rem;    /* framework step index */
+  --numeral-ghost: clamp(4rem, 3rem + 3vw, 6rem); /* @kind other */
+
+  /* Body — EB Garamond */
+  --body-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem); /* @kind other */
+  --body-md: 1.125rem; /* @kind font */
+  --body-sm: 1.0625rem; /* @kind font */
+  --body-xs: 0.9375rem; /* @kind font */
+
+  /* UI — Helvetica Neue, always uppercase */
+  --ui-md: 0.8125rem;
+  --ui-sm: 0.75rem;
+
+  /* Dateline — Courier New, always uppercase */
+  --mono-md: 0.75rem;
+  --mono-sm: 0.6875rem;
+  --mono-xs: 0.625rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-display: 1.02; /* @kind font */
+  --leading-snug: 1.15; /* @kind font */
+  --leading-title: 1.25; /* @kind font */
+  --leading-body: 1.6; /* @kind font */
+  --leading-ui: 1; /* @kind font */
+
+  --tracking-display: -0.01em;
+  --tracking-normal: 0;
+  --tracking-ui: 0.16em;
+  --tracking-ui-wide: 0.18em;
+  --tracking-mono: 0.2em;
+
+  --measure-hero: 440px; /* @kind font */
+  --measure-body: 640px; /* @kind font */
+  --measure-narrow: 28rem; /* @kind font */
+}

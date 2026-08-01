@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x760" name="Editorial" subtitle="Section openers, framework steps, signal grid, pathways, quotes, red panel" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;padding:24px;background:var(--paper);font-family:var(--font-body)}</style></head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { SectionOpener, FrameworkStep, SignalCard, PathwayCard, ProofQuote, RedPanel, Creed } = window.NatalieMicaleSchultzDesignSystem_f5075c;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{display:'grid',gap:34}}>
+    <SectionOpener number="03" title="The Method" dateline="The framework" />
+    <ol style={{margin:0,padding:0,display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 2rem'}}>
+      <FrameworkStep number="01" title="Discover the Truth">Your best clients, your misfit clients, what’s actually working. Evidence before aspiration.</FrameworkStep>
+      <FrameworkStep number="02" title="Find the White Space">The gap in your market nobody’s claiming — where your story wins by default.</FrameworkStep>
+    </ol>
+    <ul style={{margin:0,padding:0,display:'grid',gridTemplateColumns:'1fr 1fr',background:'var(--night)',border:'1px solid rgba(255,255,255,.2)'}}>
+      <SignalCard title="Your sales cycle keeps stretching.">Prospects take months to understand what it is you actually do.</SignalCard>
+      <SignalCard title="Your team is busy, not focused.">Activity everywhere. Progress somewhere. Priority nowhere.</SignalCard>
+    </ul>
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',borderTop:'1px solid var(--hairline)'}}>
+      <PathwayCard />
+      <div style={{borderLeft:'1px solid var(--hairline)'}}><PathwayCard title="The Focused Growth Retainer" summary="Ongoing strategic advisory for founders with traction and too much noise." price="Begins at $3,500/month" cta="See How It Works" /></div>
+    </div>
+    <ProofQuote attribution="Client name · Title, Company · [being collected]" />
+    <div style={{margin:'0 -24px'}}><Creed /></div>
+    <div style={{margin:'0 -24px'}}><RedPanel /></div>
+  </div>);
+</script></body></html>

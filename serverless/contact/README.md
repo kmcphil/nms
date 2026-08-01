@@ -1,6 +1,6 @@
 # Contact form (API Gateway + Lambda + SES)
 
-Marigold owns this path. The static Astro site posts `FormData` to `PUBLIC_CONTACT_ENDPOINT`.
+Marigold owns this path. The React site posts `FormData` to `VITE_CONTACT_ENDPOINT`.
 
 ## Expected behavior
 
@@ -12,4 +12,4 @@ Marigold owns this path. The static Astro site posts `FormData` to `PUBLIC_CONTA
 
 ## Next implementation step
 
-Deploy a small Node or Python Lambda behind API Gateway (CORS enabled for the site origin), wire SES, set `PUBLIC_CONTACT_ENDPOINT` in the Astro build environment.
+Deploy a small Node or Python Lambda behind API Gateway (CORS enabled for the site origin), wire SES, set `VITE_CONTACT_ENDPOINT` in the Vite build environment.

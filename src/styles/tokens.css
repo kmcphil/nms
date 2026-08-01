@@ -112,8 +112,10 @@
   --duration-base: 380ms;
   --duration-slow: 1100ms;
 
-  /* Nav height — room for a larger brand logo */
-  --nav-height: 8.75rem; /* clears larger signature logo */
+  /* Nav — style guide 160px-wide horizontal mark (~80px tall at 2:1); Claude Design aligned */
+  --nav-height: 6.5rem;
+  --logo-nav-height: 80px;
+  --logo-footer-height: 80px;
 
   /* Logo minimums (style guide — digital) */
   --logo-horizontal-min-width: 160px;

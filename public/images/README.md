@@ -2,6 +2,8 @@
 
 One primary use per image across the site. Do **not** dump full shoots or reuse the same file on multiple pages.
 
+Delivery uses **WebP** (see `src/data/images.ts`) with JPEG siblings for fallback. After adding originals, run `python scripts/optimize-images.py` (max long edge 2000px).
+
 ```
 public/images/
 ├── home/

@@ -1,1 +1,2 @@
-// Shared utilities (formatting, analytics helpers, etc.)
+export { initAnalytics, trackEvent } from './analytics';
+export type { AnalyticsEvent } from './analytics';

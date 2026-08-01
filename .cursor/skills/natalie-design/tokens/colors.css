@@ -1,0 +1,54 @@
+/* Color — three brand colors, plus the editorial neutrals of Brand System V1.
+   Style guide (SSOT for identity/logo): Red #C8102E · Black #000000 · White #FFFFFF
+   Brand System V1 (web direction, as shipped in the site build): signature red #C20000,
+   ink #141110, cream #F4EDE1. Both reds are declared; see readme.md "Red, twice". */
+:root {
+  /* Identity — style guide, logo + print */
+  --brand-red: #c8102e;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-red-rgb: 200, 16, 46; /* @kind other */
+  --brand-black-rgb: 0, 0, 0; /* @kind other */
+  --brand-white-rgb: 255, 255, 255; /* @kind other */
+
+  /* Web palette — Brand System V1 */
+  --red: #c20000;            /* signature red: sequence + action only */
+  --ink: #141110;            /* headlines, structural rules */
+  --body: #3a3631;           /* body copy on white */
+  --paper: #ffffff;          /* page */
+  --cream: #f4ede1;          /* type on red / ink only */
+  --label: #8a857c;          /* datelines, kickers, prices */
+  --caption: #6a655d;        /* captions */
+  --hairline: #e6e4e0;       /* 1px rules */
+  --ghost: #f0efec;          /* oversized ghost numerals */
+  --night: #0d0d0d;          /* dark editorial section */
+
+  /* Semantic aliases */
+  --text-primary: var(--ink);
+  --text-body: var(--body);
+  --text-muted: var(--label);
+  --text-caption: var(--caption);
+  --text-inverse: var(--paper);
+  --text-on-red: var(--cream);
+  --text-accent: var(--red);
+
+  --surface-page: var(--paper);
+  --surface-cream: var(--cream);
+  --surface-night: var(--night);
+  --surface-red: var(--red);
+
+  --rule-hairline: var(--hairline);
+  --rule-structural: var(--ink);
+  --border-photo: var(--ink);
+
+  --link: var(--red);
+  --link-hover: var(--ink);
+  --focus-ring: var(--red);
+
+  /* On dark */
+  --on-dark-primary: #ffffff;
+  --on-dark-body: rgba(255, 255, 255, 0.72);
+  --on-dark-lede: rgba(255, 255, 255, 0.88);
+  --on-dark-hairline: rgba(255, 255, 255, 0.16);
+  --on-dark-border: rgba(255, 255, 255, 0.2);
+}

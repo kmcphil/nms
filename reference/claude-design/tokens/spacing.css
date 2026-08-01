@@ -1,0 +1,22 @@
+/* Spacing — 72px page margin, 64–80px sections, 30px list rhythm. */
+:root {
+  --space-2xs: 0.35rem;
+  --space-xs: 0.65rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 5rem;
+
+  --grid-gap-xs: 16px;
+  --grid-gap-sm: 24px;
+  --grid-gap-md: 32px;
+  --grid-gap-lg: 64px;
+
+  --page-margin: 72px;
+  --page-margin-mobile: 24px;
+  --section-padding: clamp(4rem, 8vw, 5rem);
+  --section-padding-lg: clamp(4.5rem, 9vw, 6.5rem);
+  --row-padding: 30px; /* list rhythm */
+}

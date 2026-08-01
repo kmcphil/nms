@@ -1,0 +1,19 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Core" subtitle="Buttons, text links, kickers, the hand underscore, photo frames" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;padding:24px;background:var(--paper);font-family:var(--font-body)}</style></head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Button, TextLink, Kicker, HandUnderscore, MediaFrame } = window.NatalieMicaleSchultzDesignSystem_f5075c;
+const Row = ({label, children}) => <div style={{display:'grid',gap:10}}><span style={{fontFamily:'var(--font-mono)',fontSize:10,letterSpacing:'.2em',textTransform:'uppercase',color:'var(--label)'}}>{label}</span><div style={{display:'flex',flexWrap:'wrap',alignItems:'center',gap:16}}>{children}</div></div>;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{display:'grid',gap:26}}>
+    <Row label="Button — ink · red · disabled · small"><Button>Start the Conversation</Button><Button variant="red">Start the Conversation</Button><Button disabled>Start the Conversation</Button><Button size="sm">Work With Me</Button></Row>
+    <div style={{background:'var(--red)',padding:20,display:'flex',gap:16,alignItems:'center'}}><Button variant="onRed">Start the Conversation</Button><TextLink tone="light">Read the results</TextLink></div>
+    <Row label="Text link"><TextLink>Explore the Sprint</TextLink><TextLink arrow={false}>More about Natalie</TextLink></Row>
+    <Row label="Kicker"><Kicker>The broadcast years · TV journalist</Kicker></Row>
+    <Row label="Hand underscore"><span style={{fontFamily:'var(--font-display)',fontSize:30,fontWeight:600,color:'var(--ink)'}}>You have a <HandUnderscore>clarity</HandUnderscore> problem.</span></Row>
+    <Row label="Media frame — portrait, ink border"><div style={{width:150}}><MediaFrame src="../../assets/photography/home-meet.jpg" alt="Natalie" border/></div><div style={{width:150}}><MediaFrame src="../../assets/photography/home-creed.jpg" alt="Natalie" shadow/></div></Row>
+  </div>);
+</script></body></html>
