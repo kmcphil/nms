@@ -12,24 +12,44 @@ export function ResultsPage() {
       <Seo {...meta} />
       <section className="page-shell" aria-labelledby="results-heading">
         <div className="wrap page-shell__inner">
-          <p className="staging-banner">Staging — proof publishes only with client approval</p>
-          <p className="page-kicker">Results</p>
-          <h1 className="page-title" id="results-heading">
-            What clarity does to a business.
-          </h1>
+          <header className="page-opener">
+            <p className="page-opener__kicker">Results</p>
+            <p className="page-opener__dateline">In progress</p>
+            <h1 className="page-opener__title" id="results-heading">
+              What clarity does to a business.
+            </h1>
+          </header>
+
           <p className="page-lede">
-            Case studies and named testimonials ship here when Natalie has approval. Nothing invented,
-            nothing placeholder-as-proof.
+            Named case studies and testimonials publish here as engagements close and clients
+            grant approval. What follows is representative language from recent work.
           </p>
-          <p className="results-note">
-            “From tangled services to a sellable value ladder — in 45 days.” — Client name · Title,
-            company · [being collected]
+
+          <ul className="results-quotes">
+            <li>
+              <blockquote className="results-quote">
+                <p>“From tangled services to a sellable value ladder. In 45 days.”</p>
+                <footer className="results-quote__attr">
+                  Client · Title, company · Approval pending
+                </footer>
+              </blockquote>
+            </li>
+            <li>
+              <blockquote className="results-quote">
+                <p>“The positioning that opened a market few were serving.”</p>
+                <footer className="results-quote__attr">
+                  Client · Title, company · Approval pending
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+
+          <p className="results-footnote">
+            Editor’s note: this page publishes only reviewed, named proof. If you’d like references
+            during an initial conversation, ask directly.
           </p>
-          <p className="results-note">
-            “The positioning that opened a market few were serving.” — Client name · Title, company ·
-            [being collected]
-          </p>
-          <div style={{ marginTop: '2.5rem' }}>
+
+          <div className="results-close">
             <PrimaryCta />
           </div>
         </div>

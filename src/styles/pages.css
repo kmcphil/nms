@@ -44,7 +44,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  /* Soft left field for type — keeps the right portrait bright */
+  /* Soft left field for type: keeps the right portrait bright */
   background: linear-gradient(
     90deg,
     rgba(var(--brand-white-rgb), 0.94) 0%,
@@ -274,7 +274,7 @@
   font-style: italic;
 }
 
-/* ── Folio list (engagements — not cards) ─────────────────── */
+/* ── Folio list (engagements, not cards) ─────────────────── */
 .folio__title {
   max-width: 8ch;
   margin-bottom: var(--space-2xl);
@@ -875,7 +875,7 @@
   width: 100%;
   height: auto;
   max-width: none;
-  /* Full frame — never crop sunglasses, hand, or negative space */
+  /* Full frame. Never crop sunglasses, hand, or negative space. */
   object-fit: contain;
   object-position: center bottom;
 }

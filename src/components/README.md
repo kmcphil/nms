@@ -9,4 +9,4 @@ forms/        Contact and related forms
 seo/          Document head helpers
 ```
 
-Build sections only when implementing a specific page—not ahead of time.
+Build sections only when implementing a specific page, not ahead of time.

@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Keyword Guide — Natalie Micale Schultz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: Letter;
+    margin: 0.75in 0.9in 0.9in 0.9in;
+    @bottom-right {
+      content: counter(page);
+      font-family: 'Courier New', monospace;
+      font-size: 9pt;
+      color: #8a857c;
+    }
+  }
+
+  :root {
+    --ink: #141110;
+    --red: #C20000;
+    --body: #3a3631;
+    --label: #8a857c;
+    --hairline: #e6e4e0;
+    --paper: #ffffff;
+    --cream: #f4ede1;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--body);
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.55;
+    max-width: 6.6in;
+    margin: 0 auto;
+    padding: 0.25in 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin: 1.6em 0 0.55em;
+  }
+
+  h1 {
+    font-size: 32pt;
+    margin: 0 0 0.35em;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 17pt;
+    padding-bottom: 0.35em;
+    border-bottom: 1.5px solid var(--ink);
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 13pt;
+    color: var(--ink);
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-family: 'Courier New', monospace;
+    color: var(--label);
+    font-weight: 400;
+  }
+
+  /* First H1 doubles as the cover title */
+  body > h1:first-of-type {
+    padding-top: 0.5in;
+    margin-bottom: 0.15em;
+  }
+  body > h1:first-of-type + p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14pt;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0 0 1em;
+    line-height: 1.35;
+    max-width: 5in;
+  }
+
+  p { margin: 0 0 0.8em; }
+  p, li { orphans: 2; widows: 2; }
+
+  strong { color: var(--ink); font-weight: 600; }
+  em { color: var(--ink); }
+
+  ul, ol {
+    padding-left: 1.15em;
+    margin: 0 0 0.9em;
+  }
+  li { margin: 0.25em 0; }
+  li p { margin: 0.2em 0; }
+
+  hr {
+    border: 0;
+    border-top: 1.5px solid var(--ink);
+    margin: 2.2em 0;
+    height: 0;
+  }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    background: #f4f2ee;
+    padding: 0.05em 0.35em;
+    border-radius: 2px;
+    color: var(--ink);
+  }
+
+  a { color: var(--red); text-decoration: underline; }
+
+  blockquote {
+    margin: 1em 0;
+    padding: 0.15em 0 0.15em 1em;
+    border-left: 3px solid var(--red);
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.2em;
+    font-size: 10pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.5em 0.65em;
+    border-bottom: 1px solid var(--hairline);
+  }
+  th {
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--label);
+    border-bottom: 1.5px solid var(--ink);
+  }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) td { background: #faf8f4; }
+
+  /* Little running-order feel for the section numbers baked into the H2 text */
+  h2 { position: relative; }
+
+  /* Hand-drawn kicker before the doc */
+  .kicker {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5em;
+  }
+
+  /* Callout for the closing italic line */
+  body > p:last-of-type em {
+    display: block;
+    padding: 1em 1.2em;
+    background: var(--cream);
+    color: var(--ink);
+    border-left: 3px solid var(--red);
+    font-size: 12pt;
+    line-height: 1.4;
+    margin-top: 1.2em;
+  }
+
+  /* Avoid split-in-half tables and section headers */
+  table, tr, td, th { page-break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+</style>
+</head>
+<body>
+<p class="kicker">Natalie Micale Schultz · Keyword Guide · 2026</p>
+<h1 id="keyword-guide-for-natalie">Keyword Guide — for Natalie</h1>
+<p>A working guide to what phrases to use where. Not a rulebook — a set of anchors.</p>
+<p>Your website's voice is editorial and human. <strong>Editorial always wins over SEO.</strong> But if we weave the right phrases into the right sections, Google can actually find you when a founder searches for what you do.</p>
+<p>Google (and now ChatGPT search, Perplexity, etc.) reads pages like a person: it looks at the headline first, the opening paragraph second, the subheads third, and the body copy last. Say what you do clearly at the top, and everything else follows.</p>
+<hr />
+<h2 id="1-your-keyword-bank">1. Your keyword bank</h2>
+<p>Think of these as your <em>approved vocabulary</em>. They aren't slogans. You don't need to force them. But when you're deciding between two ways to say the same thing, pick the one from the list.</p>
+<h3 id="your-branded-terms-protect-these">Your branded terms (protect these)</h3>
+<p>These are the phrases that are yours. Say them exactly the same way every time.</p>
+<ul>
+<li><strong>Natalie Micale Schultz</strong> (full name, this spelling)</li>
+<li><strong>The White Space Growth Framework</strong></li>
+<li><strong>Growth Clarity Diagnostic</strong></li>
+<li><strong>Strategic Compass Sprint</strong></li>
+<li><strong>Focused Growth Retainer</strong></li>
+<li><strong>Strategic Repositioning Engagement</strong></li>
+<li><strong>Tory Burch 2023 Fellow</strong> (not "Tory Burch Foundation Fellow" — the year matters for search)</li>
+</ul>
+<h3 id="category-terms-what-people-search-for-you-as">Category terms (what people search for you as)</h3>
+<p>Pick 1–2 of these per page and use them in the opening paragraph.</p>
+<ul>
+<li>Brand strategist</li>
+<li>Brand strategy consultant</li>
+<li>Growth strategy consultant</li>
+<li>Positioning consultant</li>
+<li>Brand strategy advisor</li>
+<li>Strategic advisor for founders</li>
+<li>Fractional brand strategist (only where it's genuinely accurate)</li>
+<li>Brand repositioning strategist (Repositioning page only)</li>
+</ul>
+<h3 id="audience-terms-who-you-serve">Audience terms (who you serve)</h3>
+<ul>
+<li>Founder-led businesses</li>
+<li>Founder-led teams</li>
+<li>Growth-stage companies</li>
+<li>Businesses at an inflection point</li>
+<li>Companies with real traction</li>
+</ul>
+<p><em>(Avoid "small business," "SMB," or "startup" — wrong audience for search intent.)</em></p>
+<h3 id="location-signal">Location signal</h3>
+<ul>
+<li><strong>Omaha, NE</strong> (once on Home, About, Contact, footer — not on every page)</li>
+<li>Midwest (natural, only where it fits)</li>
+</ul>
+<h3 id="problem-language-mid-funnel-searchers">Problem language (mid-funnel searchers)</h3>
+<ul>
+<li>Unclear positioning</li>
+<li>Story clarity before execution</li>
+<li>Scattered momentum</li>
+<li>Clarity problem, not a capability problem</li>
+<li>Find the white space</li>
+<li>Positioning sprint</li>
+<li>Strategic clarity</li>
+</ul>
+<h3 id="do-not-use-these-on-your-site">Do NOT use these on your site</h3>
+<ul>
+<li>"Free strategy call" (kills lead quality)</li>
+<li>"Full-service marketing"</li>
+<li>"Marketing agency" (you're not one)</li>
+<li>"Fractional CMO" (except to explicitly say you're <em>not</em> this)</li>
+<li>"Coach" or "coaching"</li>
+<li>"Boutique agency" <em>for yourself now</em> (it's your past — you're a consultancy now)</li>
+<li>"Small business," "SMB," "solopreneur"</li>
+<li>Generic marketing words: "engagement," "activation," "amplification" <em>when they don't mean anything</em></li>
+<li>Emojis in body copy</li>
+</ul>
+<hr />
+<h2 id="2-the-rules-of-the-road">2. The rules of the road</h2>
+<ol>
+<li><strong>Say what you do in the first 20 words of any page.</strong> Not clever. Direct.</li>
+<li><strong>Use one branded term + one category term per opening paragraph.</strong> Example: <em>"I help founder-led businesses find their white space and clarify the story before more spend on execution."</em> — "founder-led businesses" (audience) + "white space" (branded) + "clarify the story" (owned).</li>
+<li><strong>Headlines should sound like Natalie. Subheads should sound like search.</strong> People read headlines for voice and subheads to skim. So headlines can be poetic ("<em>Not a capability problem. A clarity problem.</em>"), but the subheads underneath should be plain ("<em>Brand strategy for founder-led teams at an inflection point.</em>"). Give Google the plain version somewhere near the poetic one.</li>
+<li><strong>The credentials matter for search.</strong> <em>Tory Burch 2023 Fellow</em>, <em>former TV journalist</em>, <em>built and sold a boutique agency</em> — these belong on Home, About, and once in the footer. They're not bragging; they're how Google (and prospects) verify who you are.</li>
+<li><strong>Link between your pages using real words.</strong> When you say "the Sprint" in body copy, make it a link to the Sprint page. When you say "the framework," link to the Method section. Don't say "click here" or "learn more."</li>
+<li><strong>Never write a paragraph for Google.</strong> If a sentence exists only to fit a keyword, delete it. Google is smart enough to notice, and readers definitely are.</li>
+</ol>
+<hr />
+<h2 id="3-section-by-section-copy-guide">3. Section-by-section copy guide</h2>
+<h3 id="home">HOME (<code>/</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Say clearly that you are a brand strategist for founder-led businesses in Omaha, and that your framework is called the White Space Growth Framework. Everything else is voice.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Example phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hero headline</strong></td>
+<td>Voice-first. This is your one poetic moment.</td>
+<td><em>"Not a capability problem. A clarity problem."</em> (keep)</td>
+</tr>
+<tr>
+<td><strong>Hero subhead / lede</strong></td>
+<td>Plain, keyword-forward. This is what Google reads first.</td>
+<td><em>"Brand strategy and growth clarity for founder-led businesses at an inflection point."</em></td>
+</tr>
+<tr>
+<td><strong>Trust line before logos</strong></td>
+<td>Category + credibility</td>
+<td><em>"Seen by 150+ brands, from Tory Burch Foundation Fellows to national news."</em></td>
+</tr>
+<tr>
+<td><strong>Problem section (01)</strong></td>
+<td>Problem-aware phrases</td>
+<td>"unclear positioning," "scattered momentum," "story tangled," "your best work is invisible"</td>
+</tr>
+<tr>
+<td><strong>Creed ("What I believe")</strong></td>
+<td>Voice. No keyword pressure.</td>
+<td>Voice only.</td>
+</tr>
+<tr>
+<td><strong>Meet Natalie (02)</strong></td>
+<td>Credentials + category</td>
+<td><em>"Former TV journalist. Built and sold a boutique agency. Tory Burch 2023 Fellow."</em> + <em>"a strategic partner to founder-led businesses"</em></td>
+</tr>
+<tr>
+<td><strong>Method (03)</strong></td>
+<td>Owned framework term</td>
+<td><em>"The White Space Growth Framework"</em> — say the full name once.</td>
+</tr>
+<tr>
+<td><strong>Ways In (04)</strong></td>
+<td>The three offer names — exact</td>
+<td><em>"Strategic Compass Sprint · Focused Growth Retainer · Strategic Repositioning Engagement"</em></td>
+</tr>
+<tr>
+<td><strong>Diagnostic tease</strong></td>
+<td>Owned offer term</td>
+<td><em>"Growth Clarity Diagnostic — a paid entry point."</em></td>
+</tr>
+<tr>
+<td><strong>Proof (05)</strong></td>
+<td>Client names (once approved)</td>
+<td>Use real client names as they appear on their own sites.</td>
+</tr>
+<tr>
+<td><strong>Standard (06)</strong></td>
+<td>Voice. No pressure.</td>
+<td>Voice only.</td>
+</tr>
+<tr>
+<td><strong>Closing CTA</strong></td>
+<td>High-intent phrase</td>
+<td><em>"Let's find your white space."</em> keeps your branded verb.</td>
+</tr>
+<tr>
+<td><strong>Location signal</strong></td>
+<td>Once, somewhere natural</td>
+<td><em>"Working with founders from Omaha and beyond."</em> — footer or under Meet.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say these on Home somewhere:</strong> <em>brand strategy, founder-led businesses, white space, Omaha, Tory Burch 2023 Fellow.</em></p>
+<hr />
+<h3 id="about-about">ABOUT (<code>/about</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Rank you for your own name and confirm your credentials.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Example phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hero kicker</strong></td>
+<td>Category</td>
+<td><em>"Brand strategist. Founder advisor. Former TV journalist."</em></td>
+</tr>
+<tr>
+<td><strong>Hero headline</strong></td>
+<td>Voice. Your one line.</td>
+<td>(existing works)</td>
+</tr>
+<tr>
+<td><strong>Bio opening</strong></td>
+<td>Full name in first sentence</td>
+<td><em>"I'm Natalie Micale Schultz — brand strategist and growth advisor to founder-led businesses."</em></td>
+</tr>
+<tr>
+<td><strong>Career section</strong></td>
+<td>Credentials verbatim</td>
+<td><em>"Former TV journalist. Built and sold a boutique agency (acquired by Sentral Holdings, 2025). Tory Burch 2023 Fellow."</em></td>
+</tr>
+<tr>
+<td><strong>How I work</strong></td>
+<td>Category + audience</td>
+<td><em>"I work with founder-led and growth-stage companies at inflection points."</em></td>
+</tr>
+<tr>
+<td><strong>Anywhere natural</strong></td>
+<td>Location</td>
+<td><em>"Based in Omaha, working with founders across the country."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say these on About:</strong> <em>Natalie Micale Schultz, brand strategist, founder-led, Tory Burch 2023 Fellow, Omaha, Sentral Holdings 2025.</em></p>
+<hr />
+<h3 id="services-index-services">SERVICES INDEX (<code>/services</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Name the four ways in — clearly and in exact language — and be the parent that links to each sub-page.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hero</strong></td>
+<td><em>"Three ways to work together — plus a paid diagnostic to figure out what you actually need."</em></td>
+</tr>
+<tr>
+<td><strong>Each of the three cards</strong></td>
+<td>Use the exact offer name in the H3. Under each, one plain sentence of what it is.</td>
+</tr>
+<tr>
+<td><strong>Growth Clarity Diagnostic block</strong></td>
+<td>Say the name in the heading. Body: <em>"A single working session and a written findings memo — a paid, lower-risk way to start."</em></td>
+</tr>
+<tr>
+<td><strong>"Not sure which fits?" line</strong></td>
+<td>Link the phrase to the Diagnostic section.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say:</strong> <em>Strategic Compass Sprint, Focused Growth Retainer, Strategic Repositioning Engagement, Growth Clarity Diagnostic</em> — each once, exactly as branded.</p>
+<hr />
+<h3 id="strategic-compass-sprint-servicesstrategic-compass-sprint">STRATEGIC COMPASS SPRINT (<code>/services/strategic-compass-sprint</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Rank for "positioning sprint," "brand strategy sprint," and its own branded name.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Example phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong></td>
+<td>Voice + owned name</td>
+<td><em>"Six weeks to an operating document your team can run."</em> (keep)</td>
+</tr>
+<tr>
+<td><strong>Lede (first paragraph)</strong></td>
+<td>Both: category phrase + specifics</td>
+<td><em>"A six-week positioning sprint for founder-led teams — three working sessions, one operating document."</em></td>
+</tr>
+<tr>
+<td><strong>What's included</strong></td>
+<td>Concrete: positioning, ICP, offers, messaging, plan</td>
+<td>Plain bullets — no marketing-speak.</td>
+</tr>
+<tr>
+<td><strong>Fit block</strong></td>
+<td>Audience terms</td>
+<td><em>"For founder-led businesses with traction and a tangled story."</em></td>
+</tr>
+<tr>
+<td><strong>Not a fit</strong></td>
+<td>Anti-match language</td>
+<td><em>"Not a website project. Not marketing execution. Not a coaching program."</em></td>
+</tr>
+<tr>
+<td><strong>Investment</strong></td>
+<td>Starting price if approved</td>
+<td><em>"Starts at $XX,XXX."</em> — one number, no ranges dressed up as ranges.</td>
+</tr>
+<tr>
+<td><strong>CTA</strong></td>
+<td>Named action</td>
+<td><em>"Start the conversation."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say:</strong> <em>positioning sprint, brand strategy sprint, six weeks, founder-led, ICP, messaging, 60–90 day plan.</em></p>
+<hr />
+<h3 id="focused-growth-retainer-servicesfocused-growth-retainer">FOCUSED GROWTH RETAINER (<code>/services/focused-growth-retainer</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Rank for "strategic advisor for founders" and disambiguate from fractional CMO / coaching.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Example phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong></td>
+<td>Voice</td>
+<td>(existing works)</td>
+</tr>
+<tr>
+<td><strong>Lede</strong></td>
+<td>Category + what it isn't</td>
+<td><em>"Monthly strategic advisory for founder-led teams — senior judgment on priorities, not a task dump and not a fractional CMO."</em></td>
+</tr>
+<tr>
+<td><strong>How it works</strong></td>
+<td>Plain rhythm — what the monthly cadence is</td>
+<td>e.g. <em>"One working session a month. Voice or writing between."</em></td>
+</tr>
+<tr>
+<td><strong>Not a fit</strong></td>
+<td>Explicit disambiguation</td>
+<td><em>"Not day-to-day execution. Not a fractional CMO seat. Not marketing management."</em> — this phrasing rescues the query "strategic advisor vs fractional CMO."</td>
+</tr>
+<tr>
+<td><strong>Investment</strong></td>
+<td>Monthly retainer number</td>
+<td><em>"Starts at $X,XXX/month, three-month minimum."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say:</strong> <em>strategic advisor, monthly retainer, founder-led, not a fractional CMO.</em></p>
+<hr />
+<h3 id="strategic-repositioning-engagement-servicesstrategic-repositioning">STRATEGIC REPOSITIONING ENGAGEMENT (<code>/services/strategic-repositioning</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Rank for "brand repositioning strategist" and read as <em>premium</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Example phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong></td>
+<td>Voice</td>
+<td><em>"The business changed. The story did not."</em> (keep)</td>
+</tr>
+<tr>
+<td><strong>Lede</strong></td>
+<td>Category + who it's for</td>
+<td><em>"High-stakes brand repositioning for established founder-led teams: market shifts, leadership transitions, and multi-stakeholder alignment."</em></td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>Research-informed language</td>
+<td><em>"Discovery. Market research. Positioning. Story architecture. Rollout plan."</em></td>
+</tr>
+<tr>
+<td><strong>Fit block</strong></td>
+<td>Established-company audience</td>
+<td><em>"For companies that have outgrown the story that got them here — usually $10M+ in revenue."</em></td>
+</tr>
+<tr>
+<td><strong>Investment</strong></td>
+<td>Anchor as premium</td>
+<td><em>"Investment starts at $XX,XXX. Timeline: 10–14 weeks."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aim to say:</strong> <em>brand repositioning strategist, strategic repositioning, market shifts, multi-stakeholder, research-informed.</em></p>
+<hr />
+<h3 id="results-results">RESULTS (<code>/results</code>)</h3>
+<p><strong>The one thing this page must do for search:</strong> Build trust — but only with real proof.</p>
+<p>Until you have at least one approved case study live, this page is intentionally hidden from Google. Once real work ships:</p>
+<ul>
+<li>Each case study headline should contain the <strong>client name</strong> and <strong>the result in plain language</strong>. Not: <em>"How we transformed a mid-market brand."</em> Instead: <em>"From tangled services to a sellable value ladder — Bel Air, in 45 days."</em></li>
+<li>Include one direct client quote per case with their name and title (real ones, approved).</li>
+<li>Link each case study to the relevant service page (e.g. "Delivered through a Strategic Compass Sprint →").</li>
+</ul>
+<hr />
+<h3 id="faq-faq">FAQ (<code>/faq</code>)</h3>
+<p><strong>This page will do more SEO work than any other.</strong> Every question here is a phrase someone might Google.</p>
+<p><strong>Rewrite each question the way a founder would type it.</strong> Not: <em>"Investment tiers"</em> — instead: <em>"How much does a brand strategy sprint cost?"</em></p>
+<p>Suggested questions to include (each is a real search):
+- <em>How much does a brand strategy sprint cost?</em>
+- <em>What's the difference between a strategic advisor and a fractional CMO?</em>
+- <em>How long does a brand repositioning take?</em>
+- <em>Do you work with early-stage founders?</em>
+- <em>Do you work with companies outside Omaha?</em>
+- <em>Do you write copy or build websites?</em> (answer: no — clarifies scope)
+- <em>What is the White Space Growth Framework?</em>
+- <em>Do you use AI in your strategy work?</em>
+- <em>Can I start with just a diagnostic?</em></p>
+<p>Answers should be direct, warm, and 2–4 sentences each. Every answer should include at least one anchor phrase from your keyword bank naturally.</p>
+<hr />
+<h3 id="start-the-conversation-start-the-conversation">START THE CONVERSATION (<code>/start-the-conversation</code>)</h3>
+<p>Not a page Google needs to optimize hard. But two rules:</p>
+<ol>
+<li><strong>First sentence names what this is:</strong> <em>"Tell me about your business and the strategic problem. I read every inquiry personally."</em></li>
+<li><strong>Keep the "I read every inquiry" line.</strong> It's a phrase people quote when they refer you — helps branded search intent.</li>
+</ol>
+<hr />
+<h2 id="4-the-one-page-cheat-sheet-print-this">4. The one-page cheat sheet (print this)</h2>
+<p><strong>Every page:</strong>
+- First 20 words say what you do and who you serve.
+- Full name spelled once on Home + About.
+- Location signal (Omaha) once on Home + About + Contact + footer.
+- Framework named exactly once as <em>The White Space Growth Framework.</em></p>
+<p><strong>Every headline:</strong>
+- If it's poetic, put a plain-language subhead directly under it.</p>
+<p><strong>Every link inside body copy:</strong>
+- Use the real name of the destination as the link text. Never "click here."</p>
+<p><strong>Every service page:</strong>
+- Name the offer in the H1.
+- Say the category phrase in the first paragraph (<em>positioning sprint / strategic advisor / brand repositioning</em>).
+- Say what it <em>isn't</em> somewhere on the page.
+- Publish a starting price if approved.</p>
+<p><strong>Never:</strong>
+- Force a keyword into a sentence that doesn't want it.
+- Write for Google at the expense of voice.
+- Use words you wouldn't say out loud to a founder.</p>
+<hr />
+<p><em>If a sentence passes the "would I actually say this to a founder on a fit call?" test, ship it. If not, cut it — whether it's SEO or not.</em></p>
+</body>
+</html>

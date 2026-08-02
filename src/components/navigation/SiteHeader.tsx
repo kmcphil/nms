@@ -54,15 +54,15 @@ export function SiteHeader() {
             className="header__logo header__logo--desktop"
             src="/brand/logo-horizontal-black.svg"
             alt={site.name}
-            width={220}
-            height={110}
+            width={256}
+            height={128}
           />
           <img
             className="header__logo header__logo--mobile"
             src="/brand/logo-stacked-black.svg"
             alt=""
-            width={120}
-            height={120}
+            width={140}
+            height={140}
             aria-hidden
           />
         </Link>

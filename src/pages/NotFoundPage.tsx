@@ -12,14 +12,24 @@ export function NotFoundPage() {
       <Seo {...meta} />
       <section className="page-shell" aria-labelledby="not-found-heading">
         <div className="wrap page-shell__inner">
-          <p className="page-kicker">404</p>
-          <h1 className="page-title" id="not-found-heading">
-            This page isn’t here.
-          </h1>
-          <p className="page-lede">The link may be outdated, or the page moved.</p>
-          <Link className="btn btn--primary" to="/">
-            Back to home
-          </Link>
+          <header className="page-opener">
+            <p className="page-opener__kicker">404</p>
+            <p className="page-opener__dateline">Not here</p>
+            <h1 className="page-opener__title" id="not-found-heading">
+              This page isn’t here.
+            </h1>
+          </header>
+
+          <p className="page-lede">
+            The link may be outdated, or the page moved. From here you can head back to the main
+            entrance.
+          </p>
+
+          <div className="btn-row">
+            <Link className="btn btn--primary" to="/">
+              Back to home
+            </Link>
+          </div>
         </div>
       </section>
     </PageContainer>

@@ -1,5 +1,5 @@
 /**
- * BragBar — compact credibility strip (not a content section)
+ * BragBar: compact credibility strip (not a content section)
  */
 
 .brag {
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1.75rem;
+  height: 2.25rem;
   flex: 0 0 auto;
 }
 
@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  max-width: 9.5rem;
+  max-width: 8.5rem;
   color: rgba(var(--brand-black-rgb), 0.45);
 }
 
@@ -67,8 +67,8 @@
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  filter: grayscale(1) contrast(0.92);
-  opacity: 0.7;
+  filter: grayscale(1) contrast(1.05);
+  opacity: 0.72;
 }
 
 .brag__placeholder {
@@ -84,14 +84,14 @@
   color: inherit;
 }
 
-/* Tablet / mid — allow wrap into centered rows */
+/* Tablet / mid: allow wrap into centered rows */
 @media (max-width: 1099px) {
   .brag__logos {
     flex-wrap: wrap;
   }
 }
 
-/* Mobile — two centered rows, or restrained scroll if preferred */
+/* Mobile: two centered rows, or restrained scroll if preferred */
 @media (max-width: 639px) {
   .brag {
     padding-block: 2.25rem;
@@ -109,6 +109,6 @@
   }
 
   .brag__item {
-    height: 1.65rem;
+    height: 2rem;
   }
 }

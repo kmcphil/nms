@@ -1,11 +1,11 @@
 /**
- * Natalie Micale Schultz — design tokens
+ * Natalie Micale Schultz: design tokens
  *
  * Brand SSOT: reference/style-guide.pdf (see reference/style-guide-spec.md)
  * Brand colors ONLY: Red #C8102E · Black #000000 · White #FFFFFF
- * Logo script (Sunday April): logo artwork only — never body/UI
+ * Logo script (Sunday April): logo artwork only. Never body/UI
  *
- * Hierarchy uses opacity of black or white — no fourth brand color.
+ * Hierarchy uses opacity of black or white. No fourth brand color.
  */
 
 :root {
@@ -44,7 +44,7 @@
   --text-on-red: var(--brand-white);
 
   /* ── Font families
-   * Logo script = Sunday April (in logo files only — not loaded for UI)
+   * Logo script = Sunday April (in logo files only, not loaded for UI)
    * Site UI/body = website editorial stack (brief / design-direction)
    * Never use Sunday April for body, nav, or buttons
    */
@@ -101,7 +101,7 @@
   --border-width-medium: 2px;
   --border-width-thick: 3px;
 
-  /* Style guide: no logo shadows/effects — UI stays sharp */
+  /* Style guide: no logo shadows/effects. UI stays sharp */
   --radius-none: 0;
   --radius-sm: 0;
   --shadow-none: none;
@@ -112,12 +112,12 @@
   --duration-base: 380ms;
   --duration-slow: 1100ms;
 
-  /* Nav — style guide 160px-wide horizontal mark (~80px tall at 2:1); Claude Design aligned */
-  --nav-height: 6.5rem;
-  --logo-nav-height: 80px;
+  /* Nav: large brand presence in the bar */
+  --nav-height: 9rem;
+  --logo-nav-height: 128px;
   --logo-footer-height: 80px;
 
-  /* Logo minimums (style guide — digital) */
+  /* Logo minimums (style guide, digital) */
   --logo-horizontal-min-width: 160px;
   --logo-stacked-min-width: 120px;
   --logo-monogram-min-width: 40px;

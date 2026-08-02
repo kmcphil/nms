@@ -1,18 +1,28 @@
 # Credibility logos (`BragBar`)
 
-Drop approved marks here. The strip is **image-only** — no text placeholders.
+Marks live under `/images/logos/`. Order and metadata: `src/data/bragLogos.ts`.
 
-**Prefer SVG.** Transparent PNG is fine if SVG isn’t available (then update `src` in `src/data/bragLogos.ts` to `.png`).
+## Live marks
 
-## Required filenames
+| Brand | File |
+|-------|------|
+| CBS News | `cbs-news.png` |
+| C-SPAN | `c-span.png` |
+| WUSA 9 | `wusa-9.png` |
+| 10/11 NOW News | `1011-news.png` |
+| oh! | `oh.png` |
 
-| Brand | File | Public path |
-|-------|------|-------------|
-| Tory Burch Foundation | `tory-burch-foundation.svg` | `/images/logos/tory-burch-foundation.svg` |
-| oh hello | `oh-hello.svg` | `/images/logos/oh-hello.svg` |
-| 10/11 News | `1011-news.svg` | `/images/logos/1011-news.svg` |
-| Marigold ONE11 | `marigold-one11.svg` | `/images/logos/marigold-one11.svg` |
-| Foreman Technologies | `foreman-technologies.svg` | `/images/logos/foreman-technologies.svg` |
-| Contemporary Woods | `contemporary-woods.svg` | `/images/logos/contemporary-woods.svg` |
+## Pending — drop file, then flip `pending: false`
 
-Missing files are skipped until they land. Black or single-color marks work best (the UI applies grayscale).
+| Brand | Expected file |
+|-------|---------------|
+| Tory Burch Foundation | `tory-burch-foundation.png` |
+| Marigold ONE11 | `marigold-one11.png` |
+| Second client (TBD) | `client-2.png` (rename in `bragLogos.ts` when approved) |
+
+## Rules
+
+- Prefer transparent-background PNG or SVG. Black-on-transparent renders best (the CSS greys them).
+- The strip filters out any entry marked `pending: true`, so nothing broken renders in the meantime.
+- Alternate press ↔ client in the order — don't cluster all news marks together.
+- Max 8 marks. Past 8 the strip becomes wallpaper.

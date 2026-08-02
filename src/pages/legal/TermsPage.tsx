@@ -12,12 +12,17 @@ export function TermsPage() {
       <Seo {...meta} />
       <section className="page-shell" aria-labelledby="terms-heading">
         <div className="wrap page-shell__inner">
-          <p className="staging-banner">Shell for attorney review — not final legal advice</p>
-          <h1 className="page-title" id="terms-heading">
-            Terms of Use
-          </h1>
+          <header className="page-opener">
+            <p className="page-opener__kicker">Terms</p>
+            <p className="page-opener__dateline">Updated August 1, 2026</p>
+            <h1 className="page-opener__title" id="terms-heading">
+              Terms of Use
+            </h1>
+          </header>
+
+          <p className="staging-banner">Shell for attorney review. Not final legal advice.</p>
+
           <div className="legal-body">
-            <p>Last updated: August 1, 2026</p>
             <p>
               By using {site.url.replace('https://', '')}, you agree to these terms. Engagement
               work is governed by a separate written scope and agreement.

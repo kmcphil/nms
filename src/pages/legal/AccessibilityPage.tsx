@@ -12,9 +12,14 @@ export function AccessibilityPage() {
       <Seo {...meta} />
       <section className="page-shell" aria-labelledby="a11y-heading">
         <div className="wrap page-shell__inner">
-          <h1 className="page-title" id="a11y-heading">
-            Accessibility
-          </h1>
+          <header className="page-opener">
+            <p className="page-opener__kicker">Accessibility</p>
+            <p className="page-opener__dateline">How this site is built</p>
+            <h1 className="page-opener__title" id="a11y-heading">
+              Accessibility Statement
+            </h1>
+          </header>
+
           <div className="legal-body">
             <p>
               {site.name} aims to make this website usable for as many people as possible. The site

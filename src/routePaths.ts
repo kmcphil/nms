@@ -1,4 +1,4 @@
-/** URL paths — shared by sitemap plugin and documentation */
+/** URL paths: shared by sitemap plugin and documentation */
 export const publicRoutePaths = [
   '/',
   '/about',

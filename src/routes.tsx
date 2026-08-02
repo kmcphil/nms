@@ -15,7 +15,7 @@ import { FocusedGrowthRetainerPage } from './pages/services/FocusedGrowthRetaine
 import { StrategicCompassSprintPage } from './pages/services/StrategicCompassSprintPage';
 import { StrategicRepositioningPage } from './pages/services/StrategicRepositioningPage';
 
-/** Central route table — keep in sync with `routePaths.ts` and the sitemap nav. */
+/** Central route table: keep in sync with `routePaths.ts` and the sitemap nav. */
 export const appRoutes: RouteObject[] = [
   {
     element: <MainLayout />,

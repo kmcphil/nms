@@ -12,12 +12,17 @@ export function PrivacyPage() {
       <Seo {...meta} />
       <section className="page-shell" aria-labelledby="privacy-heading">
         <div className="wrap page-shell__inner">
-          <p className="staging-banner">Shell for attorney review — not final legal advice</p>
-          <h1 className="page-title" id="privacy-heading">
-            Privacy Policy
-          </h1>
+          <header className="page-opener">
+            <p className="page-opener__kicker">Privacy</p>
+            <p className="page-opener__dateline">Updated August 1, 2026</p>
+            <h1 className="page-opener__title" id="privacy-heading">
+              Privacy Policy
+            </h1>
+          </header>
+
+          <p className="staging-banner">Shell for attorney review. Not final legal advice.</p>
+
           <div className="legal-body">
-            <p>Last updated: August 1, 2026</p>
             <p>
               This site is operated by {site.name} (“I,” “me”). This page describes how information
               collected through {site.url.replace('https://', '')} is handled. Final language is

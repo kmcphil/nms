@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { bragLogos, type BragLogo } from '../../data/bragLogos';
+import { activeBragLogos, type BragLogo } from '../../data/bragLogos';
 import '../../styles/brag-bar.css';
 
 type Props = {
@@ -38,8 +38,8 @@ function LogoMark({ logo }: { logo: BragLogo }) {
  * Uses real logos when files exist; otherwise monochrome text placeholders.
  */
 export function BragBar({
-  logos = bragLogos,
-  label = 'Trusted by founders, nonprofits, media organizations, and nationally recognized brands.',
+  logos = activeBragLogos,
+  label = 'Strategic work referenced across national media, retail, and philanthropy.',
 }: Props) {
   return (
     <section className="brag" aria-label="Trusted by">

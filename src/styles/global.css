@@ -1,5 +1,5 @@
 /**
- * Global foundation — typography, spacing, containers, buttons
+ * Global foundation: typography, spacing, containers, buttons
  * Brand colors: style-guide.pdf → tokens.css
  */
 
@@ -75,7 +75,7 @@ a:hover {
 
 .page {
   width: 100%;
-  padding-block: calc(var(--nav-height) + var(--space-xl)) var(--space-2xl);
+  padding-block: 0 var(--space-2xl);
 }
 
 .page--wide {
@@ -87,7 +87,7 @@ a:hover {
   width: 100%;
 }
 
-/* Scaffold label only — removed when a page is built */
+/* Scaffold label only. Removed when a page is built. */
 .page-placeholder h1 {
   margin-bottom: 0;
 }

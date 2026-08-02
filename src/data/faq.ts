@@ -17,12 +17,12 @@ export const faqItems = [
   {
     question: 'Why starting prices instead of “custom only”?',
     answer:
-      'Starting prices qualify serious buyers and keep the conversation honest. Final scope is still written for your situation — you will see timeline, responsibilities, boundaries, and payment terms before anything begins.',
+      'Starting prices qualify serious buyers and keep the conversation honest. Final scope is still written for your situation. You will see timeline, responsibilities, boundaries, and payment terms before anything begins.',
   },
   {
     question: 'Where does AI fit?',
     answer:
-      'AI can accelerate production. It cannot replace a clear point of view. We use AI for leverage after the strategic decisions are made — not as a substitute for positioning, story, or offer architecture.',
+      'AI can accelerate production. It cannot replace a clear point of view. We use AI for leverage after the strategic decisions are made, not as a substitute for positioning, story, or offer architecture.',
   },
   {
     question: 'How long until we see clarity?',

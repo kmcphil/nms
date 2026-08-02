@@ -14,7 +14,7 @@ export type NavItem = {
   children?: NavChild[];
 };
 
-/** Primary sitemap — exact order */
+/** Primary sitemap: exact order */
 export const navPrimary: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },

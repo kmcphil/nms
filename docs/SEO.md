@@ -1,5 +1,8 @@
 # SEO implementation notes
 
+> Full per-page strategy, keyword targets, and launch checklist: [`SEO-STRATEGY.md`](./SEO-STRATEGY.md).
+> This file documents the code wiring only.
+
 ## Per-page meta
 
 `src/components/seo/Seo.tsx` sets title, description, canonical, Open Graph, Twitter card, optional `noindex`, and JSON-LD on route change.
@@ -16,6 +19,7 @@ Page copy lives in `src/data/seo.ts` (`pageSeo`).
 | `Service` | Sprint / Retainer / Repositioning |
 | `FAQPage` | FAQ |
 | `ContactPage` | Start the Conversation |
+| `BreadcrumbList` | Sprint / Retainer / Repositioning |
 
 ## Crawlability
 

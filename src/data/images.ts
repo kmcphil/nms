@@ -1,15 +1,16 @@
 /**
- * Curated photography — one primary use per image.
+ * Curated photography. One primary use per image.
  * WebP for delivery; JPEG originals kept alongside for fallback tooling.
  * Keep in sync with public/images/{page}/. No cross-page repeats.
  */
 
 export const homeImages = {
   hero: '/images/home/DL2A0265.webp',
-  creed: '/images/home/DL2A0268.webp',
-  framework: '/images/home/DL2A1100.webp',
+  creedWhiteboard: '/images/home/DL2A1100.webp',
+  meet: '/images/home/DL2A7975.webp',
   diagnostic: '/images/home/DL2A7656.webp',
   closing: '/images/home/DL2A8012.webp',
+  whiteSpace: '/images/home/white-space-framework.svg',
 } as const;
 
 export const aboutImages = {
@@ -18,7 +19,6 @@ export const aboutImages = {
   story: '/images/about/pandemic-tony-governor.webp',
   leadership: '/images/about/Governor.webp',
   summit: '/images/about/YP-Summit-105.webp',
-  philosophy: '/images/about/DL2A7921.webp',
 } as const;
 
 export const servicesImages = {
@@ -34,7 +34,7 @@ export const servicesImages = {
   repositionProcess: '/images/services/833A4516.webp',
 } as const;
 
-/** Results heroes reserved for approved case-study imagery — no Natalie portraits. */
+/** Results heroes reserved for approved case-study imagery. No Natalie portraits. */
 export const resultsImages = {} as const;
 
 export const faqImages = {

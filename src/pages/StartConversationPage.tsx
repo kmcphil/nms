@@ -15,16 +15,22 @@ export function StartConversationPage() {
       <Seo {...meta} schema={contactPageSchema()} />
       <section className="page-shell" aria-labelledby="contact-heading">
         <div className="wrap-wide contact-layout">
-          <div>
-            <p className="page-kicker">Inquiry</p>
-            <h1 className="page-title" id="contact-heading">
-              Start the Conversation
-            </h1>
+          <div className="contact-layout__intro">
+            <header className="page-opener">
+              <p className="page-opener__kicker">Inquiry</p>
+              <p className="page-opener__dateline">Every inquiry reviewed personally</p>
+              <h1 className="page-opener__title" id="contact-heading">
+                Start the Conversation
+              </h1>
+            </header>
+
             <p className="page-lede">
-              Tell me about the business and the strategic problem. I review every inquiry. Qualified
-              leads receive a link for a 30-minute fit call — scheduling is never automatic.
+              Tell me about the business and the strategic problem. I review every inquiry.
+              Qualified leads receive a link for a 30-minute fit call. Scheduling is never
+              automatic.
             </p>
-            <figure className="page-photo">
+
+            <figure className="page-photo contact-layout__photo">
               <Picture
                 src={contactImages.hero}
                 alt="Natalie Micale Schultz in conversation."
@@ -34,7 +40,10 @@ export function StartConversationPage() {
               />
             </figure>
           </div>
-          <ContactForm />
+
+          <div className="contact-layout__form">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </PageContainer>

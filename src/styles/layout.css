@@ -1,5 +1,5 @@
 /**
- * Global chrome — header, navigation, footer
+ * Global chrome: header, navigation, footer
  * Brand logo rules: reference/style-guide-spec.md
  */
 
@@ -53,7 +53,7 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  /* Tight clear space — signature reads larger in the bar */
+  /* Tight clear space: signature reads larger in the bar */
   padding-block: 0.2rem;
   padding-right: 0.35rem;
 }
@@ -63,19 +63,24 @@
 }
 
 .header__logo {
+  display: block;
   width: auto;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
 }
 
 .header__logo--desktop {
   display: none;
-  height: var(--logo-nav-height);
-  min-width: var(--logo-horizontal-min-width);
+  height: var(--logo-nav-height) !important;
+  width: auto !important;
+  min-width: calc(var(--logo-nav-height) * 2);
 }
 
 .header__logo--mobile {
   display: block;
-  height: calc(var(--logo-nav-height) * 0.95);
+  height: 5.5rem !important;
+  width: auto !important;
   min-width: var(--logo-stacked-min-width);
 }
 

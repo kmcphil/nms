@@ -8,7 +8,7 @@ Delivery uses **WebP** (see `src/data/images.ts`) with JPEG siblings for fallbac
 public/images/
 ├── home/
 │   ├── DL2A0265.jpg   ← hero
-│   ├── DL2A0268.jpg   ← What I believe
+│   ├── DL2A7921.jpg   ← What I believe
 │   ├── DL2A1100.jpg   ← Meet Natalie / framework
 │   ├── DL2A7656.jpg   ← Proof
 │   └── DL2A8012.jpg   ← What you can count on / closing
@@ -17,8 +17,7 @@ public/images/
 │   ├── tv.jpeg        ← TV journalism
 │   ├── pandemic-tony-governor.jpg  ← story / complexity
 │   ├── Governor.jpg   ← leadership
-│   ├── YP-Summit-105.jpg           ← thought leadership
-│   └── DL2A7921.jpg   ← philosophy
+│   └── YP-Summit-105.jpg           ← thought leadership
 ├── services/
 │   ├── DL2A0375.jpg   ← landing hero
 │   ├── DL2A1503.jpg   ← clarity before execution

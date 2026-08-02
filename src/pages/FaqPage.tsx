@@ -17,10 +17,14 @@ export function FaqPage() {
       <Seo {...meta} schema={faqPageSchema(items)} />
       <section className="page-shell" aria-labelledby="faq-heading">
         <div className="wrap page-shell__inner">
-          <p className="page-kicker">FAQ</p>
-          <h1 className="page-title" id="faq-heading">
-            Straight answers.
-          </h1>
+          <header className="page-opener">
+            <p className="page-opener__kicker">FAQ</p>
+            <p className="page-opener__dateline">The most-asked questions</p>
+            <h1 className="page-opener__title" id="faq-heading">
+              Straight answers.
+            </h1>
+          </header>
+
           <p className="page-lede">
             Fit, pricing rationale, timelines, AI, and what this work is not. If you still have a
             question, start the conversation.
@@ -30,14 +34,20 @@ export function FaqPage() {
             {faqItems.map((item) => (
               <li key={item.question}>
                 <details>
-                  <summary>{item.question}</summary>
+                  <summary>
+                    <span className="faq-list__q">{item.question}</span>
+                    <span className="faq-list__toggle" aria-hidden="true" />
+                  </summary>
                   <p>{item.answer}</p>
                 </details>
               </li>
             ))}
           </ul>
 
-          <div style={{ marginTop: '2.5rem' }}>
+          <div className="faq-close">
+            <p className="faq-close__text">
+              Still curious? Ask the specific question directly.
+            </p>
             <PrimaryCta />
           </div>
         </div>

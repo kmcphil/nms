@@ -31,7 +31,7 @@ const problemSignals = [
   {
     icon: 'slash' as const,
     title: 'Your best work is invisible.',
-    body: 'The offer your best clients rave about is buried under everything else you sell — no clear value ladder.',
+    body: 'The offer your best clients rave about is buried under everything else you sell. No clear value ladder.',
   },
 ];
 
@@ -91,7 +91,7 @@ const frameworkSteps = [
   {
     n: '02',
     title: 'Find the White Space',
-    body: 'The gap in your market nobody’s claiming — where your story wins by default.',
+    body: 'The gap in your market nobody’s claiming, where your story wins by default.',
   },
   {
     n: '03',
@@ -134,14 +134,14 @@ const pathways = [
 
 /**
  * Homepage structure follows client Homepage.pdf + Brand System V1.
- * Photography: curated home set (DL2A0265 · DL2A0268 · DL2A1100 · DL2A7656 · DL2A8012).
+ * Photography: curated home set (DL2A0265 · DL2A7921 · DL2A7975 · DL2A7656 · DL2A8012).
  */
 export function HomePage() {
   return (
     <>
       <Seo {...pageSeo.home} schema={[personSchema(), professionalServiceSchema()]} />
 
-      {/* M1 — Hero · DL2A0265 */}
+      {/* M1: Hero · DL2A0265 */}
       <section className="cover" aria-label="Introduction">
         <div className="cover__inner wrap-wide">
           <div className="cover__content">
@@ -182,17 +182,26 @@ export function HomePage() {
         </div>
       </section>
 
-      <BragBar label="Trusted by founders, nonprofits, media organizations, and nationally recognized brands." />
+      <BragBar />
 
-      {/* 01 — The Problem */}
+      {/* 01: The Problem */}
       <section className="edition" id="problem" aria-labelledby="problem-heading">
         <div className="wrap edition__inner">
-          <p className="edition__label">01 — The Problem</p>
-          <h2 className="edition__display" id="problem-heading">
+          <header className="section-opener">
+            <span className="section-opener__n" aria-hidden="true">
+              01
+            </span>
+            <h2 className="section-opener__title" id="problem-heading">
+              The Problem
+            </h2>
+            <p className="section-opener__dateline">The diagnosis</p>
+          </header>
+
+          <h3 className="edition__display">
             More marketing won’t fix a message problem.
-          </h2>
+          </h3>
           <p className="edition__lede">
-            You have momentum. Customers are buying. Something is clearly working — and that’s
+            You have momentum. Customers are buying. Something is clearly working. And that’s
             exactly what makes this stage dangerous. Because right now, every new idea feels urgent,
             every channel feels necessary, and the story that got you here is too tangled to get you
             where you’re going.
@@ -209,33 +218,47 @@ export function HomePage() {
               </li>
             ))}
           </ul>
+
+          <p className="edition__close">
+            None of these are marketing failures. They’re a message-clarity failure. Clarity has a
+            discipline.
+          </p>
         </div>
       </section>
 
-      {/* Creed · DL2A0268 */}
-      <section className="creed" aria-label="What I believe">
-        <div className="wrap-wide creed__inner">
-          <div className="creed__copy">
-            <p className="creed__label">What I believe</p>
+      {/* Creed · DL2A1100 · editorial interlude between 01 and 02 */}
+      <section className="creed" aria-labelledby="creed-heading">
+        <div className="wrap-wide">
+          <header className="section-opener section-opener--interlude">
+            <h2 className="section-opener__title" id="creed-heading">
+              First Principle
+            </h2>
+            <p className="section-opener__dateline">Everything is built on it</p>
+          </header>
+
+          <div className="creed__spread">
+            <figure className="creed__photo">
+              <Picture
+                src={homeImages.creedWhiteboard}
+                alt="Natalie sketching a positioning matrix on a whiteboard."
+                width={1600}
+                height={1067}
+              />
+            </figure>
+
             <blockquote className="creed__quote">
               <p>
-                Strategy is what you say. <em>Story</em> is how you say it. Get both right first —
-                everything you execute is built on it.
+                Strategy is what you say. <em>Story</em> is how you say it.
+              </p>
+              <p>
+                Get both right first. Everything you execute is built on it.
               </p>
             </blockquote>
           </div>
-          <figure className="creed__photo">
-            <Picture
-              src={homeImages.creed}
-              alt="Natalie Micale Schultz, warm and direct."
-              width={1333}
-              height={2000}
-            />
-          </figure>
         </div>
       </section>
 
-      {/* 02 — Meet Natalie · DL2A1100 */}
+      {/* 02: Meet Natalie · DL2A7975 */}
       <section className="meet" id="meet" aria-labelledby="meet-heading">
         <div className="wrap-wide meet__inner">
           <div className="meet__copy">
@@ -254,34 +277,18 @@ export function HomePage() {
               team outrun everyone else.
             </p>
 
-            <p className="cover__kicker meet__chapter">The broadcast years · TV journalist</p>
             <h3 className="edition__display meet__headline">
-              I’ve watched the market change — and built my career by changing with it.
+              I’ve watched the market change, and built my career by changing with it.
             </h3>
 
             <div className="meet__body">
               <p>
-                I started as a TV journalist — producing, anchoring, and reporting as media shifted
-                from broadcast to digital. That training taught me to find the signal inside the
-                noise, understand what makes people care, and shape a clear story under pressure.
-              </p>
-              <p>
-                From there I moved into agency growth — helping one agency reach acquisition, then
-                founding my own boutique marketing agency in 2018 and selling it to Sentral Holdings
-                in 2025. Across nearly a decade at two agencies, I worked with over 150 brands.
-              </p>
-              <p>
-                As AI began reshaping how marketing gets produced, I chose not to build another
-                traditional agency. I built a focused consultancy around the work that matters even
-                more now: finding the white space, clarifying the story, and helping leaders make the
-                right strategic decisions before they spend more on execution.
+                I started in TV news, learning to find the signal in the noise, then spent nearly a
+                decade in agency growth, building and selling my own boutique firm after working with
+                150+ brands. As AI reshaped marketing, I built a focused consultancy around what
+                matters more now: clarity before spend.
               </p>
             </div>
-
-            <p className="meet__creds">
-              Former TV journalist · Built and sold a boutique agency · 150+ brands · Tory Burch 2023
-              Fellow
-            </p>
 
             <Link className="cover__link" to="/about">
               More about Natalie →
@@ -290,16 +297,16 @@ export function HomePage() {
 
           <figure className="meet__photo">
             <Picture
-              src={homeImages.framework}
-              alt="Natalie Micale Schultz mapping strategy at the whiteboard."
-              width={1333}
-              height={2000}
+              src={homeImages.meet}
+              alt="Natalie Micale Schultz, founder of Natalie Micale Schultz consultancy."
+              width={1067}
+              height={1600}
             />
           </figure>
         </div>
       </section>
 
-      {/* 03 — The Method */}
+      {/* 03: The Method */}
       <section className="method" id="method" aria-labelledby="method-heading">
         <div className="wrap method__inner">
           <header className="section-opener">
@@ -312,14 +319,28 @@ export function HomePage() {
             <p className="section-opener__dateline">The framework</p>
           </header>
 
-          <h3 className="edition__display">The White Space Growth Framework</h3>
-          <p className="edition__lede">
-            The White Space Growth Framework is the method underneath every engagement: first
-            uncover what is true, then find the market opportunity few are clearly owning, shape the
-            story and offers around it, and turn that clarity into focused action. It keeps
-            businesses from spending more on execution before they have made the strategic decisions
-            that make the work effective.
-          </p>
+          <div className="method__intro">
+            <div className="method__copy">
+              <h3 className="edition__display">The White Space Growth Framework</h3>
+              <p className="edition__lede">
+                The method underneath every engagement: uncover what is true, find the market
+                opportunity few are clearly owning, shape the story and offers around it, then turn
+                that clarity into focused action, before more spend on execution.
+              </p>
+            </div>
+
+            <figure className="method__diagram">
+              <img
+                src={homeImages.whiteSpace}
+                alt=""
+                width={320}
+                height={320}
+              />
+              <figcaption>
+                The white space, where you win by <span className="cover__mark">default</span>
+              </figcaption>
+            </figure>
+          </div>
 
           <ol className="framework">
             {frameworkSteps.map((step) => (
@@ -337,15 +358,11 @@ export function HomePage() {
               </li>
             ))}
           </ol>
-
-          <p className="method__tag">
-            The white space — where you win by <span className="cover__mark">default</span>
-          </p>
         </div>
       </section>
 
-      {/* 04 — Ways In */}
-      <section className="ways" id="ways" aria-labelledby="ways-heading">
+      {/* 04: Ways In — dark editorial ledger */}
+      <section className="ways edition" id="ways" aria-labelledby="ways-heading">
         <div className="wrap ways__inner">
           <header className="section-opener">
             <span className="section-opener__n" aria-hidden="true">
@@ -361,29 +378,36 @@ export function HomePage() {
             Three ways in. One standard of <span className="cover__mark">thinking</span>.
           </h3>
 
-          <div className="ways__grid">
-            {pathways.map((item) => (
-              <article className="ways__card" key={item.href}>
-                <h4>{item.name}</h4>
-                <p>{item.summary}</p>
-                <p className="ways__price">{item.price}</p>
-                <Link className="cover__link" to={item.href}>
-                  {item.cta}
-                </Link>
-              </article>
+          <ol className="ways__ledger">
+            {pathways.map((item, i) => (
+              <li className="ways__row" key={item.href}>
+                <span className="ways__ord" aria-hidden="true">
+                  N<span className="ways__ord-degree">o</span> 0{i + 1}
+                </span>
+                <div className="ways__row-body">
+                  <h4 className="ways__row-title">{item.name}</h4>
+                  <p className="ways__row-summary">{item.summary}</p>
+                </div>
+                <div className="ways__rail">
+                  <p className="ways__price">{item.price}</p>
+                  <Link className="cover__link" to={item.href}>
+                    {item.cta}
+                  </Link>
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
 
           <p className="ways__note" id="diagnostic">
             Not sure which fits? Start with a Growth Clarity Diagnostic ($1,500–$2,500): one focused
             working session, a written findings memo, and a straight answer about what you actually
-            need — even if the answer is “not me.”{' '}
+              need, even if the answer is “not me.”{' '}
             <Link to="/start-the-conversation">Book the Diagnostic →</Link>
           </p>
         </div>
       </section>
 
-      {/* 05 — Proof · DL2A7656 */}
+      {/* 05: Proof · DL2A7656 */}
       <section className="proof-block" id="proof" aria-labelledby="proof-heading">
         <div className="wrap-wide proof-block__inner">
           <div className="proof-block__copy">
@@ -402,7 +426,7 @@ export function HomePage() {
             <ul className="proof-quotes">
               <li>
                 <blockquote>
-                  <p>“From tangled services to a sellable value ladder — in 45 days.”</p>
+                  <p>“From tangled services to a sellable value ladder. In 45 days.”</p>
                 </blockquote>
               </li>
               <li>
@@ -428,7 +452,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 06 — What you can count on · DL2A8012 */}
+      {/* 06: What you can count on · DL2A8012 */}
       <section className="stand" id="stand" aria-labelledby="stand-heading">
         <div className="wrap-wide stand__inner">
           <figure className="stand__photo">
@@ -451,24 +475,29 @@ export function HomePage() {
               <p className="section-opener__dateline">How I show up</p>
             </header>
 
-            <p className="edition__lede stand__body">
-              I’m direct. I’ll tell you which of your ideas to kill, which offer is underpriced, and
-              when the problem is the story you’re telling — including the version you tell yourself.
-              If you’re looking for a yes-person or a pair of hands to execute someone else’s plan,
-              I’m not your strategist. If you want the truth, a sharper story, and a plan you can
-              actually run with quickly to get results, welcome. Let’s talk.
+            <p className="stand__credo">I’m direct.</p>
+
+            <p className="stand__body">
+              I’ll tell you which of your ideas to kill, which offer is underpriced, and when the
+              problem is the story you’re telling. Including the version you tell yourself.
+            </p>
+
+            <p className="stand__body">
+              If you’re looking for a yes-person, or a pair of hands to execute someone else’s
+              plan, I’m not your strategist. If you want the truth, a sharper story, and a plan you
+              can actually run with, welcome.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Closing CTA — the one red moment */}
+      {/* Closing CTA: the one red moment */}
       <section className="red-moment" aria-labelledby="close-heading">
         <div className="wrap red-moment__inner">
           <h2 id="close-heading" className="red-moment__title">
             The next stage of growth starts with a{' '}
             <em>
-              clearer <span className="cover__mark cover__mark--cream">story</span>
+              clearer <span className="cover__mark cover__mark--light">story</span>
             </em>
             .
           </h2>
