@@ -112,9 +112,10 @@
   --duration-base: 380ms;
   --duration-slow: 1100ms;
 
-  /* Nav: large brand presence in the bar */
+  /* Nav: large brand presence in the bar.
+     Logo intentionally overflows the nav bounds slightly for editorial weight. */
   --nav-height: 9rem;
-  --logo-nav-height: 128px;
+  --logo-nav-height: 152px;
   --logo-footer-height: 80px;
 
   /* Logo minimums (style guide, digital) */

@@ -33,9 +33,11 @@
 .stand,
 .red-moment {
   --ink: #141110;
-  --red: #c20000;
+  /* Brand SSOT red per style-guide.pdf; matches --brand-red in tokens.css */
+  --red: #c8102e;
   --body: #3a3631;
-  --label: #8a857c;
+  /* Small labels: on-brand (black w/ opacity per SSOT) and WCAG AA readable */
+  --label: rgba(0, 0, 0, 0.72);
   --paper: #ffffff;
   --hairline: #e6e4e0;
   --ghost: #f0efec;
@@ -107,8 +109,9 @@
 .section-opener__dateline {
   margin: 0;
   font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--label);
   justify-self: end;
@@ -173,9 +176,9 @@
 .cover__kicker {
   margin: 0 0 1.5rem;
   font-family: var(--mono);
-  font-size: 0.6875rem;
-  font-weight: 400;
-  letter-spacing: 0.2em;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--label);
 }
@@ -437,6 +440,13 @@
   margin: 0;
   padding: clamp(1.75rem, 3.5vw, 2.75rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  /* Diagnostic hover: each symptom responds to attention, echoing the "diagnosis" frame */
+  background-color: transparent;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.signal-grid li:hover {
+  background-color: var(--paper);
 }
 
 @media (min-width: 800px) {
@@ -464,6 +474,7 @@
   align-items: center;
   margin: 0 0 1.1rem;
   color: #ffffff;
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
 .signal-grid h3 {
@@ -473,6 +484,7 @@
   font-weight: 600;
   line-height: 1.25;
   color: #ffffff;
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
 .signal-grid p {
@@ -482,6 +494,18 @@
   font-size: 1.0625rem;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.72);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+/* Hover: icon + headline in full red, body in slightly softer red
+   for editorial hierarchy on the white background */
+.signal-grid li:hover .signal-grid__icon,
+.signal-grid li:hover h3 {
+  color: var(--red);
+}
+
+.signal-grid li:hover p {
+  color: rgba(200, 16, 46, 0.82);
 }
 
 .signal-grid p em {

@@ -30,14 +30,25 @@
   height: var(--nav-height);
   background: var(--bg-header);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--duration-fast) var(--ease-out);
+  /* Subtle hairline at rest to separate nav from hero */
+  border-bottom: 1px solid rgba(var(--brand-black-rgb), 0.08);
+  transition:
+    background-color var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
 }
 
-.header.is-scrolled,
+/* On scroll: transform into solid brand red with white contents.
+   Excludes .is-open so mobile drawer state stays white. */
+.header.is-scrolled:not(.is-open) {
+  background: var(--brand-red);
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+}
+
+/* Mobile drawer open state: solid white regardless of scroll position */
 .header.is-open {
-  border-bottom-color: var(--line);
   background: var(--brand-white);
+  border-bottom-color: var(--line);
 }
 
 .header__inner {
@@ -68,6 +79,14 @@
   max-width: none;
   max-height: none;
   object-fit: contain;
+  /* Swaps black → white via invert on scrolled red nav */
+  transition: filter var(--duration-base) var(--ease-out);
+}
+
+/* On scroll: pure-black SVG inverts to pure white (works because logos
+   are monochrome on transparent background) */
+.header.is-scrolled:not(.is-open) .header__logo {
+  filter: invert(1);
 }
 
 .header__logo--desktop {
@@ -186,11 +205,22 @@
   text-decoration: none;
   color: var(--brand-black);
   cursor: pointer;
+  transition: color var(--duration-base) var(--ease-out);
 }
 
 .header__link:hover,
 .header__link.is-active {
   color: var(--brand-red);
+}
+
+/* On scroll: links become white, hover fades to translucent white */
+.header.is-scrolled:not(.is-open) .header__link,
+.header.is-scrolled:not(.is-open) .header__link.is-active {
+  color: var(--brand-white);
+}
+
+.header.is-scrolled:not(.is-open) .header__link:hover {
+  color: rgba(var(--brand-white-rgb), 0.72);
 }
 
 .header__caret {
@@ -236,7 +266,27 @@
 .header__cta {
   width: 100%;
   margin-top: var(--space-xs);
+  transition:
+    background-color var(--duration-base) var(--ease-out),
+    color var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
 }
+
+/* On scroll: CTA inverts to white bg + red text so it stays visible on red nav */
+.header.is-scrolled:not(.is-open) .header__cta {
+  background: var(--brand-white);
+  color: var(--brand-red);
+  border-color: var(--brand-white);
+}
+
+.header.is-scrolled:not(.is-open) .header__cta:hover {
+  background: var(--brand-black);
+  color: var(--brand-white);
+  border-color: var(--brand-black);
+}
+
+/* Nav caret arrow (Services dropdown indicator) inherits currentColor,
+   so it already follows link color changes. */
 
 /* Desktop navigation */
 @media (min-width: 1100px) {
