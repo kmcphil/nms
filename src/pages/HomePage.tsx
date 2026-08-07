@@ -148,12 +148,12 @@ export function HomePage() {
             <p className="cover__kicker">Brand strategy · Growth clarity · Omaha, NE</p>
             <h1 className="cover__title">
               <span className="cover__title-line">You don’t have a</span>
-              <span className="cover__title-line">capability problem.</span>
-              <em className="cover__title-accent">
-                <span className="cover__title-line">You have a</span>
-                <span className="cover__title-line">clarity problem.</span>
-              </em>
+              <span className="cover__title-line">
+                <em className="cover__title-em">capability</em>
+              </span>
+              <span className="cover__title-line">problem.</span>
             </h1>
+            <p className="cover__subtitle">You have a clarity problem.</p>
             <p className="cover__lede">
               I help founder-led businesses with real traction find the white space in their market,
               sharpen their positioning, and focus on the strategic moves that matter most.

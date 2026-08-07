@@ -110,13 +110,6 @@
   font-weight: 500;
 }
 
-.cover__title em {
-  display: block;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--color-red);
-}
-
 .cover__lede {
   font-family: var(--font-body);
   font-size: var(--text-lg);
